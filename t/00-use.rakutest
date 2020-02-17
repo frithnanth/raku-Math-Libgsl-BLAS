@@ -1,0 +1,12 @@
+#!/usr/bin/env perl6
+
+use Test;
+use lib 'lib';
+
+use-ok 'Math::Libgsl::Raw::BLAS';
+use-ok 'Math::Libgsl::BLAS';
+use-ok 'Math::Libgsl::BLAS::Num32';
+use-ok 'Math::Libgsl::BLAS::Complex32';
+use-ok 'Math::Libgsl::BLAS::Complex64';
+
+done-testing;
