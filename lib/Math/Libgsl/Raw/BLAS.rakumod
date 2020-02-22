@@ -1,6 +1,6 @@
 use v6;
 
-unit module Math::Libgsl::Raw::BLAS:ver<0.0.2>:auth<cpan:FRITH>;
+unit module Math::Libgsl::Raw::BLAS:ver<0.0.3>:auth<cpan:FRITH>;
 
 use NativeCall;
 use LibraryMake;

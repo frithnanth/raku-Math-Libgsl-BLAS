@@ -1,6 +1,6 @@
 use v6.c;
 
-unit class Math::Libgsl::BLAS:ver<0.0.2>:auth<cpan:FRITH>;
+unit class Math::Libgsl::BLAS:ver<0.0.3>:auth<cpan:FRITH>;
 
 use NativeCall;
 use Math::Libgsl::Raw::BLAS :ALL;
