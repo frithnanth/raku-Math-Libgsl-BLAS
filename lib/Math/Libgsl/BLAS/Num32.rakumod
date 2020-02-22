@@ -94,7 +94,7 @@ sub srotm(Math::Libgsl::Vector::Num32 $x, Math::Libgsl::Vector::Num32 $y where {
 }
 
 # Level 2
-sub sgemv(Int $TransA, Num $α, Math::Libgsl::Matrix::Num32 $A, Math::Libgsl::Vector::Num32 $x, Num $β, Math::Libgsl::Vector::Num32 $y --> Int) is export {
+sub sgemv(Int $TransA, Num() $α, Math::Libgsl::Matrix::Num32 $A, Math::Libgsl::Vector::Num32 $x, Num() $β, Math::Libgsl::Vector::Num32 $y --> Int) is export {
   gsl_blas_sgemv($TransA, $α, $A.matrix, $x.vector, $β, $y.vector)
 }
 
@@ -106,43 +106,43 @@ sub strsv(Int $Uplo, Int $TransA, Int $Diag, Math::Libgsl::Matrix::Num32 $A, Mat
   gsl_blas_strsv($Uplo, $TransA, $Diag, $A.matrix, $x.vector)
 }
 
-sub ssymv(Int $Uplo, Num $α, Math::Libgsl::Matrix::Num32 $A, Math::Libgsl::Vector::Num32 $x, Num $β, Math::Libgsl::Vector::Num32 $y  --> Int) is export {
+sub ssymv(Int $Uplo, Num() $α, Math::Libgsl::Matrix::Num32 $A, Math::Libgsl::Vector::Num32 $x, Num() $β, Math::Libgsl::Vector::Num32 $y  --> Int) is export {
   gsl_blas_ssymv($Uplo, $α, $A.matrix, $x.vector, $β, $y.vector)
 }
 
-sub sger(Num $α, Math::Libgsl::Vector::Num32 $x, Math::Libgsl::Vector::Num32 $y, Math::Libgsl::Matrix::Num32 $A  --> Int) is export {
+sub sger(Num() $α, Math::Libgsl::Vector::Num32 $x, Math::Libgsl::Vector::Num32 $y, Math::Libgsl::Matrix::Num32 $A  --> Int) is export {
   gsl_blas_sger($α, $x.vector, $y.vector, $A.matrix)
 }
 
-sub ssyr(Int $Uplo, Num $α, Math::Libgsl::Vector::Num32 $x, Math::Libgsl::Matrix::Num32 $A  --> Int) is export {
+sub ssyr(Int $Uplo, Num() $α, Math::Libgsl::Vector::Num32 $x, Math::Libgsl::Matrix::Num32 $A  --> Int) is export {
   gsl_blas_ssyr($Uplo, $α, $x.vector, $A.matrix)
 }
 
-sub ssyr2(Int $Uplo, Num $α, Math::Libgsl::Vector::Num32 $x, Math::Libgsl::Vector::Num32 $y, Math::Libgsl::Matrix::Num32 $A  --> Int) is export {
+sub ssyr2(Int $Uplo, Num() $α, Math::Libgsl::Vector::Num32 $x, Math::Libgsl::Vector::Num32 $y, Math::Libgsl::Matrix::Num32 $A  --> Int) is export {
   gsl_blas_ssyr2($Uplo, $α, $x.vector, $y.vector, $A.matrix)
 }
 
 # Level 3
-sub sgemm(Int $TransA, Int $TransB, Num $α, Math::Libgsl::Matrix::Num32 $A, Math::Libgsl::Matrix::Num32 $B, Num $β, Math::Libgsl::Matrix::Num32 $C --> Int) is export {
+sub sgemm(Int $TransA, Int $TransB, Num() $α, Math::Libgsl::Matrix::Num32 $A, Math::Libgsl::Matrix::Num32 $B, Num() $β, Math::Libgsl::Matrix::Num32 $C --> Int) is export {
   gsl_blas_sgemm($TransA, $TransB, $α, $A.matrix, $B.matrix, $β, $C.matrix)
 }
 
-sub ssymm(Int $Side, Int $Uplo, Num $α, Math::Libgsl::Matrix::Num32 $A, Math::Libgsl::Matrix::Num32 $B, Num $β, Math::Libgsl::Matrix::Num32 $C --> Int) is export {
+sub ssymm(Int $Side, Int $Uplo, Num() $α, Math::Libgsl::Matrix::Num32 $A, Math::Libgsl::Matrix::Num32 $B, Num() $β, Math::Libgsl::Matrix::Num32 $C --> Int) is export {
   gsl_blas_ssymm($Side, $Uplo, $α, $A.matrix, $B.matrix, $β, $C.matrix)
 }
 
-sub strmm(Int $Side, Int $Uplo, Int $TransA, Int $Diag, Num $α, Math::Libgsl::Matrix::Num32 $A, Math::Libgsl::Matrix::Num32 $B --> Int) is export {
+sub strmm(Int $Side, Int $Uplo, Int $TransA, Int $Diag, Num() $α, Math::Libgsl::Matrix::Num32 $A, Math::Libgsl::Matrix::Num32 $B --> Int) is export {
   gsl_blas_strmm($Side, $Uplo, $TransA, $Diag, $α, $A.matrix, $B.matrix)
 }
 
-sub strsm(Int $Side, Int $Uplo, Int $TransA, Int $Diag, Num $α, Math::Libgsl::Matrix::Num32 $A, Math::Libgsl::Matrix::Num32 $B --> Int) is export {
+sub strsm(Int $Side, Int $Uplo, Int $TransA, Int $Diag, Num() $α, Math::Libgsl::Matrix::Num32 $A, Math::Libgsl::Matrix::Num32 $B --> Int) is export {
   gsl_blas_strsm($Side, $Uplo, $TransA, $Diag, $α, $A.matrix, $B.matrix)
 }
 
-sub ssyrk(Int $Uplo, Int $TransA, Num $α, Math::Libgsl::Matrix::Num32 $A, Num $β, Math::Libgsl::Matrix::Num32 $C --> Int) is export {
+sub ssyrk(Int $Uplo, Int $TransA, Num() $α, Math::Libgsl::Matrix::Num32 $A, Num() $β, Math::Libgsl::Matrix::Num32 $C --> Int) is export {
   gsl_blas_ssyrk($Uplo, $TransA, $α, $A.matrix, $β, $C.matrix)
 }
 
-sub ssyr2k(Int $Uplo, Int $TransA, Num $α, Math::Libgsl::Matrix::Num32 $A, Math::Libgsl::Matrix::Num32 $B, Num $β, Math::Libgsl::Matrix::Num32 $C --> Int) is export {
+sub ssyr2k(Int $Uplo, Int $TransA, Num() $α, Math::Libgsl::Matrix::Num32 $A, Math::Libgsl::Matrix::Num32 $B, Num() $β, Math::Libgsl::Matrix::Num32 $C --> Int) is export {
   gsl_blas_ssyr2k($Uplo, $TransA, $α, $A.matrix, $B.matrix, $β, $C.matrix)
 }

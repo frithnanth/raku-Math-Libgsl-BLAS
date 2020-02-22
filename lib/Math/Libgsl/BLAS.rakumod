@@ -79,7 +79,7 @@ sub drotm(Math::Libgsl::Vector $x, Math::Libgsl::Vector $y where { $y.vector.siz
 }
 
 # Level 2
-sub dgemv(Int $TransA, Num $α, Math::Libgsl::Matrix $A, Math::Libgsl::Vector $x, Num $β, Math::Libgsl::Vector $y --> Int) is export {
+sub dgemv(Int $TransA, Num() $α, Math::Libgsl::Matrix $A, Math::Libgsl::Vector $x, Num() $β, Math::Libgsl::Vector $y --> Int) is export {
   gsl_blas_dgemv($TransA, $α, $A.matrix, $x.vector, $β, $y.vector)
 }
 
@@ -91,44 +91,44 @@ sub dtrsv(Int $Uplo, Int $TransA, Int $Diag, Math::Libgsl::Matrix $A, Math::Libg
   gsl_blas_dtrsv($Uplo, $TransA, $Diag, $A.matrix, $x.vector)
 }
 
-sub dsymv(Int $Uplo, Num $α, Math::Libgsl::Matrix $A, Math::Libgsl::Vector $x, Num $β, Math::Libgsl::Vector $y  --> Int) is export {
+sub dsymv(Int $Uplo, Num() $α, Math::Libgsl::Matrix $A, Math::Libgsl::Vector $x, Num() $β, Math::Libgsl::Vector $y  --> Int) is export {
   gsl_blas_dsymv($Uplo, $α, $A.matrix, $x.vector, $β, $y.vector)
 }
 
-sub dger(Num $α, Math::Libgsl::Vector $x, Math::Libgsl::Vector $y, Math::Libgsl::Matrix $A  --> Int) is export {
+sub dger(Num() $α, Math::Libgsl::Vector $x, Math::Libgsl::Vector $y, Math::Libgsl::Matrix $A  --> Int) is export {
   gsl_blas_dger($α, $x.vector, $y.vector, $A.matrix)
 }
 
-sub dsyr(Int $Uplo, Num $α, Math::Libgsl::Vector $x, Math::Libgsl::Matrix $A  --> Int) is export {
+sub dsyr(Int $Uplo, Num() $α, Math::Libgsl::Vector $x, Math::Libgsl::Matrix $A  --> Int) is export {
   gsl_blas_dsyr($Uplo, $α, $x.vector, $A.matrix)
 }
 
-sub dsyr2(Int $Uplo, Num $α, Math::Libgsl::Vector $x, Math::Libgsl::Vector $y, Math::Libgsl::Matrix $A  --> Int) is export {
+sub dsyr2(Int $Uplo, Num() $α, Math::Libgsl::Vector $x, Math::Libgsl::Vector $y, Math::Libgsl::Matrix $A  --> Int) is export {
   gsl_blas_dsyr2($Uplo, $α, $x.vector, $y.vector, $A.matrix)
 }
 
 # Level 3
-sub dgemm(Int $TransA, Int $TransB, Num $α, Math::Libgsl::Matrix $A, Math::Libgsl::Matrix $B, Num $β, Math::Libgsl::Matrix $C --> Int) is export {
+sub dgemm(Int $TransA, Int $TransB, Num() $α, Math::Libgsl::Matrix $A, Math::Libgsl::Matrix $B, Num() $β, Math::Libgsl::Matrix $C --> Int) is export {
   gsl_blas_dgemm($TransA, $TransB, $α, $A.matrix, $B.matrix, $β, $C.matrix)
 }
 
-sub dsymm(Int $Side, Int $Uplo, Num $α, Math::Libgsl::Matrix $A, Math::Libgsl::Matrix $B, Num $β, Math::Libgsl::Matrix $C --> Int) is export {
+sub dsymm(Int $Side, Int $Uplo, Num() $α, Math::Libgsl::Matrix $A, Math::Libgsl::Matrix $B, Num() $β, Math::Libgsl::Matrix $C --> Int) is export {
   gsl_blas_dsymm($Side, $Uplo, $α, $A.matrix, $B.matrix, $β, $C.matrix)
 }
 
-sub dtrmm(Int $Side, Int $Uplo, Int $TransA, Int $Diag, Num $α, Math::Libgsl::Matrix $A, Math::Libgsl::Matrix $B --> Int) is export {
+sub dtrmm(Int $Side, Int $Uplo, Int $TransA, Int $Diag, Num() $α, Math::Libgsl::Matrix $A, Math::Libgsl::Matrix $B --> Int) is export {
   gsl_blas_dtrmm($Side, $Uplo, $TransA, $Diag, $α, $A.matrix, $B.matrix)
 }
 
-sub dtrsm(Int $Side, Int $Uplo, Int $TransA, Int $Diag, Num $α, Math::Libgsl::Matrix $A, Math::Libgsl::Matrix $B --> Int) is export {
+sub dtrsm(Int $Side, Int $Uplo, Int $TransA, Int $Diag, Num() $α, Math::Libgsl::Matrix $A, Math::Libgsl::Matrix $B --> Int) is export {
   gsl_blas_dtrsm($Side, $Uplo, $TransA, $Diag, $α, $A.matrix, $B.matrix)
 }
 
-sub dsyrk(Int $Uplo, Int $TransA, Num $α, Math::Libgsl::Matrix $A, Num $β, Math::Libgsl::Matrix $C --> Int) is export {
+sub dsyrk(Int $Uplo, Int $TransA, Num() $α, Math::Libgsl::Matrix $A, Num() $β, Math::Libgsl::Matrix $C --> Int) is export {
   gsl_blas_dsyrk($Uplo, $TransA, $α, $A.matrix, $β, $C.matrix)
 }
 
-sub dsyr2k(Int $Uplo, Int $TransA, Num $α, Math::Libgsl::Matrix $A, Math::Libgsl::Matrix $B, Num $β, Math::Libgsl::Matrix $C --> Int) is export {
+sub dsyr2k(Int $Uplo, Int $TransA, Num() $α, Math::Libgsl::Matrix $A, Math::Libgsl::Matrix $B, Num() $β, Math::Libgsl::Matrix $C --> Int) is export {
   gsl_blas_dsyr2k($Uplo, $TransA, $α, $A.matrix, $B.matrix, $β, $C.matrix)
 }
 
