@@ -1,6 +1,6 @@
 use v6;
 
-unit class Math::Libgsl::BLAS::Complex64:ver<0.0.1>:auth<cpan:FRITH>;
+unit class Math::Libgsl::BLAS::Complex64:ver<0.0.2>:auth<cpan:FRITH>;
 
 use NativeCall;
 use Math::Libgsl::Raw::BLAS :ALL;
@@ -70,7 +70,7 @@ sub zdscal(Num() $α, Math::Libgsl::Vector::Complex64 $x) is export {
 }
 
 # Level 2
-sub zgemv(Int $TransA, Complex $α, Math::Libgsl::Matrix::Complex64 $A, Math::Libgsl::Vector::Complex64 $x, Complex $β, Math::Libgsl::Vector::Complex64 $y ) is export {
+sub zgemv(Int $TransA, Complex $α, Math::Libgsl::Matrix::Complex64 $A, Math::Libgsl::Vector::Complex64 $x, Complex $β, Math::Libgsl::Vector::Complex64 $y --> Int) is export {
   my gsl_complex $alpha = alloc_gsl_complex;
   mgsl_complex_rect($α.re, $α.im, $alpha);
   my gsl_complex $beta = alloc_gsl_complex;
