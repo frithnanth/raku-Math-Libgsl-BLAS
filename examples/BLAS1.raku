@@ -1,5 +1,7 @@
 #!/usr/bin/env raku
 
+# See "GNU Scientific Library" manual Chapter 13 BLAS Support, Paragraph 13.2 Examples
+
 use Math::Libgsl::Constants;
 use Math::Libgsl::Matrix;
 use lib 'lib';
