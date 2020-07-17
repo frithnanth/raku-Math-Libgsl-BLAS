@@ -458,7 +458,7 @@ sudo apt install libgsl23 libgsl-dev libgslcblas0
 
 That command will install libgslcblas0 as well, since it's used by the GSL.
 
-=head2 Ubuntu 18.04
+=head2 Ubuntu 18.04 and Ubuntu 20.04
 
 libgsl23 and libgslcblas0 have a missing symbol on Ubuntu 18.04.
 I solved the issue installing the Debian Buster version of those three libraries:
