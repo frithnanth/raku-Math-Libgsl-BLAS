@@ -1,6 +1,6 @@
 use v6;
 
-unit class Math::Libgsl::BLAS::Complex64:ver<0.0.3>:auth<zef:FRITH>;
+unit class Math::Libgsl::BLAS::Complex64:ver<0.0.4>:auth<zef:FRITH>;
 
 use NativeCall;
 use Math::Libgsl::Raw::BLAS :ALL;

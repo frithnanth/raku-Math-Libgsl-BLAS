@@ -1,5 +1,7 @@
 [![Actions Status](https://github.com/frithnanth/raku-Math-Libgsl-BLAS/workflows/test/badge.svg)](https://github.com/frithnanth/raku-Math-Libgsl-BLAS/actions)
 
+[![Build Status](https://travis-ci.org/frithnanth/raku-Math-Libgsl-BLAS.svg?branch=master)](https://travis-ci.org/frithnanth/raku-Math-Libgsl-BLAS)
+
 NAME
 ====
 
