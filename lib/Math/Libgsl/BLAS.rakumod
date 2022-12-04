@@ -1,6 +1,6 @@
 use v6.c;
 
-unit class Math::Libgsl::BLAS:ver<0.0.3>:auth<cpan:FRITH>;
+unit class Math::Libgsl::BLAS:ver<0.0.3>:auth<zef:FRITH>;
 
 use NativeCall;
 use Math::Libgsl::Raw::BLAS :ALL;
@@ -142,7 +142,7 @@ Math::Libgsl::BLAS - An interface to libgsl, the Gnu Scientific Library - BLAS (
 
 =head1 SYNOPSIS
 
-=begin code :lang<perl6>
+=begin code :lang<raku>
 
 use Math::Libgsl::Raw::BLAS :ALL;
 
@@ -174,7 +174,7 @@ The Math::Libgsl::BLAS module provides functions that work on the default data t
 
 So for example this code will be executed using num32 data type variables:
 
-=begin code :lang<perl6>
+=begin code :lang<raku>
 
 use Math::Libgsl::Vector::Num32;
 use Math::Libgsl::BLAS::Num32;
@@ -458,7 +458,7 @@ sudo apt install libgsl23 libgsl-dev libgslcblas0
 
 That command will install libgslcblas0 as well, since it's used by the GSL.
 
-=head2 Ubuntu 18.04 and Ubuntu 20.04
+=head2 Ubuntu 18.04 and Ubuntu 20.04+
 
 libgsl23 and libgslcblas0 have a missing symbol on Ubuntu 18.04.
 I solved the issue installing the Debian Buster version of those three libraries:

@@ -1,9 +1,8 @@
 use v6;
 
-unit module Math::Libgsl::Raw::BLAS:ver<0.0.3>:auth<cpan:FRITH>;
+unit module Math::Libgsl::Raw::BLAS:ver<0.0.3>:auth<zef:FRITH>;
 
 use NativeCall;
-use LibraryMake;
 use Math::Libgsl::Raw::Complex;
 use Math::Libgsl::Raw::Matrix :ALL;
 use Math::Libgsl::Raw::Matrix::Num32 :ALL;

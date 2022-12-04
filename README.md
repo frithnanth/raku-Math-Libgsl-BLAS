@@ -1,3 +1,5 @@
+[![Actions Status](https://github.com/frithnanth/raku-Math-Libgsl-BLAS/workflows/test/badge.svg)](https://github.com/frithnanth/raku-Math-Libgsl-BLAS/actions)
+
 [![Build Status](https://travis-ci.org/frithnanth/raku-Math-Libgsl-BLAS.svg?branch=master)](https://travis-ci.org/frithnanth/raku-Math-Libgsl-BLAS)
 
 NAME
@@ -8,7 +10,7 @@ Math::Libgsl::BLAS - An interface to libgsl, the Gnu Scientific Library - BLAS (
 SYNOPSIS
 ========
 
-```perl6
+```raku
 use Math::Libgsl::Raw::BLAS :ALL;
 
 use Math::Libgsl::BLAS;
@@ -40,7 +42,7 @@ Since the original C library provided functions for four data types, so does thi
 
 So for example this code will be executed using num32 data type variables:
 
-```perl6
+```raku
 use Math::Libgsl::Vector::Num32;
 use Math::Libgsl::BLAS::Num32;
 
@@ -356,15 +358,15 @@ Prerequisites
 
 This module requires the libgsl library to be installed. Please follow the instructions below based on your platform:
 
-Debian Linux and Ubuntu 20.04
+Debian Linux
 ------------
 
     sudo apt install libgsl23 libgsl-dev libgslcblas0
 
 That command will install libgslcblas0 as well, since it's used by the GSL.
 
-Ubuntu 18.04
-------------
+Ubuntu 18.04 and Ubuntu 20.04+
+------------------------------
 
 libgsl23 and libgslcblas0 have a missing symbol on Ubuntu 18.04. I solved the issue installing the Debian Buster version of those three libraries:
 

@@ -1,6 +1,10 @@
 Revision history for Math-Libgsl-BLAS
 
 {{$NEXT}}
+    - Use zef ecosystem
+    - Use Github CI
+    - Use Distribution::Builder::MakeFromJSON to compile resources
+
 0.0.2 2020-02-22T19:57:54+01:00
     - Add documentation and examples
 
