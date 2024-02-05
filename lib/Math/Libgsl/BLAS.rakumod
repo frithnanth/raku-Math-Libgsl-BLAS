@@ -134,8 +134,6 @@ sub dsyr2k(Int $Uplo, Int $TransA, Num() $α, Math::Libgsl::Matrix $A, Math::Lib
 
 =begin pod
 
-[![Build Status](https://travis-ci.org/frithnanth/raku-Math-Libgsl-BLAS.svg?branch=master)](https://travis-ci.org/frithnanth/raku-Math-Libgsl-BLAS)
-
 =head1 NAME
 
 Math::Libgsl::BLAS - An interface to libgsl, the Gnu Scientific Library - BLAS (Basic Linear Algebra Subprograms).
