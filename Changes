@@ -1,6 +1,7 @@
 Revision history for Math-Libgsl-BLAS
 
 {{$NEXT}}
+    - Drop the obsolete .absolute call :-)
 
 0.0.4  2022-12-04T12:35:35+01:00
     - Use zef ecosystem
