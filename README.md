@@ -34,7 +34,7 @@ The functions are divided in three levels:
 
   * Level 3: matrix-matrix operations
 
-The names of the functions specify the kind of operation, the matrix type, and the underlying data type. For more information please read the [C Library Documentation](C Library Documentation).
+The names of the functions specify the kind of operation, the matrix type, and the underlying data type. For more information please read the C Library Documentation.
 
 Since the original C library provided functions for four data types, so does this module. The Math::Libgsl::BLAS module provides functions that work on the default data type: num64. The functions working on num32 vector and matrices are in the Math::Libgsl::BLAS::Num32 module; those working on complex64 and complex32 are respectively in the Math::Libgsl::BLAS::Complex64 and Math::Libgsl::BLAS::Complex32 modules.
 
